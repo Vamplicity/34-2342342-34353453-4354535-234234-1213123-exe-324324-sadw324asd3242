@@ -10,12 +10,12 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoi
 
 
 
-local watermark = library:Watermark("Exie.Exe | V-1.1.8 | Beta")
+local watermark = library:Watermark("Exie.Exe | V-Beta | Regular")
 -- watermark:Set("Watermark Set")
 -- watermark:Hide() -- toggles watermark
 
 local main = library:Load{
-    Name = "Exie.Exe [Credits - plr#0001]",
+    Name = "Exie.Exe",
     SizeX = 350,
     SizeY = 500,
     Theme = "Midnight",
@@ -63,7 +63,7 @@ local slider = section:Slider{
     --Default = 0.1,
     Min = 0.001,
     Max = 0.125,
-    Float = 0.001,
+    Float = 0.0005,
     Flag = "Lock-Smoothnes",
     Callback = function(value)
   getgenv().SmoothnessAmount = value
@@ -76,7 +76,7 @@ local slider = section:Slider{
     --Default = 0.1,
     Min = 2.5,
     Max = 10,
-    Float = 0.1,
+    Float = 0.01,
     Flag = "Lock-Prediction",
     Callback = function(value)
  getgenv().PredictionVelocity = value
@@ -89,7 +89,7 @@ local slider = section:Slider{
     --Default = 0.1,
     Min = 1,
     Max = 10,
-    Float = 0.1,
+    Float = 0.01,
     Flag = "Lock-Radius",
     Callback = function(value)
 getgenv().AimRadius = value
@@ -675,8 +675,8 @@ watermark:Hide()
 
 
 
-getgenv().OldAimPart = "Head"
-getgenv().AimPart = "Head" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
+getgenv().OldAimPart = "UpperTorso"
+getgenv().AimPart = "UpperTorso" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
     getgenv().AimlockKey = "q"
     getgenv().AimRadius = 1 -- How far away from someones character you want to lock on at
     getgenv().ThirdPerson = true 
